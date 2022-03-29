@@ -1,11 +1,12 @@
-const mysql=require('mysql'); //importação do módulo
+//modulo de configuração dos dois servidores: da aplicação e do banco de dados
 
-//modularização da conexão com o banco de dados
-module.exports=function(){
-    return mysql.createConnection({
+const mysql=require('mysql'); //importação módulpo mysql;
+
+module.exports=function(){ //
+    return mysql.createConnection({ //retorna a funçao;
         host: 'localhost',
             user:'root',
-            password: 'root',
+            password: 'ifms',
             database: 'portal_noticias'
-    });
+    }); //cria conexão com o bando de dados portal_noticias;
 }
